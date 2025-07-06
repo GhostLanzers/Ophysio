@@ -1,10 +1,22 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import { MapPin, Phone, Mail, Clock, Calendar, MessageCircle } from 'lucide-react';
 
 const ContactSection: React.FC = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.1 });
+  const navigate = useNavigate();
+
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    message: ''
+  });
+
+  const [errors, setErrors] = useState<Record<string, string>>({});
 
   const contactInfo = [
     {
@@ -32,6 +44,75 @@ const ContactSection: React.FC = () => {
       color: "text-purple-500"
     }
   ];
+
+  const handleInputChange = (field: string, value: string) => {
+    setFormData(prev => ({ ...prev, [field]: value }));
+    if (errors[field]) {
+      setErrors(prev => ({ ...prev, [field]: '' }));
+    }
+  };
+
+  const validateForm = () => {
+    const newErrors: Record<string, string> = {};
+
+    if (!formData.firstName.trim()) {
+      newErrors.firstName = 'First name is required';
+    }
+
+    if (!formData.lastName.trim()) {
+      newErrors.lastName = 'Last name is required';
+    }
+
+    if (!formData.email.trim()) {
+      newErrors.email = 'Email is required';
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = 'Please enter a valid email address';
+    }
+
+    if (!formData.phone.trim()) {
+      newErrors.phone = 'Phone number is required';
+    } else if (!/^\+?[\d\s-()]+$/.test(formData.phone)) {
+      newErrors.phone = 'Please enter a valid phone number';
+    }
+
+    if (!formData.message.trim()) {
+      newErrors.message = 'Please describe your health issue';
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleBookAppointment = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (validateForm()) {
+      // Navigate to booking page with pre-filled data
+      navigate('/book', {
+        state: {
+          formData: {
+            name: `${formData.firstName} ${formData.lastName}`.trim(),
+            phone: formData.phone,
+            email: formData.email,
+            healthIssue: formData.message
+          }
+        }
+      });
+    }
+  };
+
+  const handleSendMessage = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (validateForm()) {
+      alert('Message sent successfully! We will get back to you soon.');
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        message: ''
+      });
+    }
+  };
 
   return (
     <section ref={ref} id="contact" className="py-12 sm:py-16 lg:py-20 bg-white dark:bg-black">
@@ -98,9 +179,16 @@ const ContactSection: React.FC = () => {
                   </label>
                   <input
                     type="text"
-                    className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg sm:rounded-xl bg-white dark:bg-darkBlue-800 border border-gray-300 dark:border-darkBlue-600 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200 text-sm sm:text-base font-sans text-gray-900 dark:text-white"
+                    value={formData.firstName}
+                    onChange={(e) => handleInputChange('firstName', e.target.value)}
+                    className={`w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg sm:rounded-xl bg-white dark:bg-darkBlue-800 border ${
+                      errors.firstName ? 'border-red-500' : 'border-gray-300 dark:border-darkBlue-600'
+                    } focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200 text-sm sm:text-base font-sans text-gray-900 dark:text-white`}
                     placeholder="John"
                   />
+                  {errors.firstName && (
+                    <p className="mt-1 text-sm text-red-500 font-sans">{errors.firstName}</p>
+                  )}
                 </div>
                 <div>
                   <label className="block text-sm font-display font-medium text-gray-700 dark:text-darkBlue-300 mb-2">
@@ -108,9 +196,16 @@ const ContactSection: React.FC = () => {
                   </label>
                   <input
                     type="text"
-                    className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg sm:rounded-xl bg-white dark:bg-darkBlue-800 border border-gray-300 dark:border-darkBlue-600 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200 text-sm sm:text-base font-sans text-gray-900 dark:text-white"
+                    value={formData.lastName}
+                    onChange={(e) => handleInputChange('lastName', e.target.value)}
+                    className={`w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg sm:rounded-xl bg-white dark:bg-darkBlue-800 border ${
+                      errors.lastName ? 'border-red-500' : 'border-gray-300 dark:border-darkBlue-600'
+                    } focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200 text-sm sm:text-base font-sans text-gray-900 dark:text-white`}
                     placeholder="Doe"
                   />
+                  {errors.lastName && (
+                    <p className="mt-1 text-sm text-red-500 font-sans">{errors.lastName}</p>
+                  )}
                 </div>
               </div>
               
@@ -120,9 +215,16 @@ const ContactSection: React.FC = () => {
                 </label>
                 <input
                   type="email"
-                  className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg sm:rounded-xl bg-white dark:bg-darkBlue-800 border border-gray-300 dark:border-darkBlue-600 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200 text-sm sm:text-base font-sans text-gray-900 dark:text-white"
+                  value={formData.email}
+                  onChange={(e) => handleInputChange('email', e.target.value)}
+                  className={`w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg sm:rounded-xl bg-white dark:bg-darkBlue-800 border ${
+                    errors.email ? 'border-red-500' : 'border-gray-300 dark:border-darkBlue-600'
+                  } focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200 text-sm sm:text-base font-sans text-gray-900 dark:text-white`}
                   placeholder="john.doe@email.com"
                 />
+                {errors.email && (
+                  <p className="mt-1 text-sm text-red-500 font-sans">{errors.email}</p>
+                )}
               </div>
               
               <div>
@@ -131,27 +233,42 @@ const ContactSection: React.FC = () => {
                 </label>
                 <input
                   type="tel"
-                  className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg sm:rounded-xl bg-white dark:bg-darkBlue-800 border border-gray-300 dark:border-darkBlue-600 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200 text-sm sm:text-base font-sans text-gray-900 dark:text-white"
+                  value={formData.phone}
+                  onChange={(e) => handleInputChange('phone', e.target.value)}
+                  className={`w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg sm:rounded-xl bg-white dark:bg-darkBlue-800 border ${
+                    errors.phone ? 'border-red-500' : 'border-gray-300 dark:border-darkBlue-600'
+                  } focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200 text-sm sm:text-base font-sans text-gray-900 dark:text-white`}
                   placeholder="+1 (555) 123-4567"
                 />
+                {errors.phone && (
+                  <p className="mt-1 text-sm text-red-500 font-sans">{errors.phone}</p>
+                )}
               </div>
               
               <div>
                 <label className="block text-sm font-display font-medium text-gray-700 dark:text-darkBlue-300 mb-2">
-                  Message
+                  Describe Your Health Issue
                 </label>
                 <textarea
                   rows={4}
-                  className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg sm:rounded-xl bg-white dark:bg-darkBlue-800 border border-gray-300 dark:border-darkBlue-600 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200 text-sm sm:text-base resize-none font-sans text-gray-900 dark:text-white"
-                  placeholder="Tell us about your condition or how we can help you..."
+                  value={formData.message}
+                  onChange={(e) => handleInputChange('message', e.target.value)}
+                  className={`w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg sm:rounded-xl bg-white dark:bg-darkBlue-800 border ${
+                    errors.message ? 'border-red-500' : 'border-gray-300 dark:border-darkBlue-600'
+                  } focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200 text-sm sm:text-base resize-none font-sans text-gray-900 dark:text-white`}
+                  placeholder="Tell us about your condition, symptoms, or how we can help you..."
                 ></textarea>
+                {errors.message && (
+                  <p className="mt-1 text-sm text-red-500 font-sans">{errors.message}</p>
+                )}
               </div>
               
               <div className="flex flex-col space-y-3 sm:space-y-0 sm:flex-row sm:space-x-4">
                 <motion.button
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  type="submit"
+                  type="button"
+                  onClick={handleBookAppointment}
                   className="flex-1 flex items-center justify-center space-x-2 py-3 sm:py-4 bg-primary-500 text-white rounded-lg sm:rounded-xl hover:bg-primary-600 transition-colors font-semibold text-sm sm:text-base font-sans"
                 >
                   <Calendar className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -162,6 +279,7 @@ const ContactSection: React.FC = () => {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   type="button"
+                  onClick={handleSendMessage}
                   className="flex-1 flex items-center justify-center space-x-2 py-3 sm:py-4 bg-darkBlue-700 text-white rounded-lg sm:rounded-xl hover:bg-darkBlue-600 transition-colors font-semibold text-sm sm:text-base font-sans"
                 >
                   <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5" />

@@ -1,3 +1,40 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* React DatePicker Dark Mode Styles */
+.react-datepicker {
+  @apply bg-white dark:bg-darkBlue-800 border border-gray-300 dark:border-darkBlue-600 rounded-lg shadow-lg;
+}
+
+.react-datepicker__header {
+  @apply bg-gray-50 dark:bg-darkBlue-700 border-b border-gray-300 dark:border-darkBlue-600;
+}
+
+.react-datepicker__current-month {
+  @apply text-gray-900 dark:text-white font-semibold;
+}
+
+.react-datepicker__day-name {
+  @apply text-gray-600 dark:text-darkBlue-300;
+}
+
+.react-datepicker__day {
+  @apply text-gray-900 dark:text-white hover:bg-primary-100 dark:hover:bg-primary-900/30;
+}
+
+.react-datepicker__day--selected {
+  @apply bg-primary-500 text-white;
+}
+
+.react-datepicker__day--disabled {
+  @apply text-gray-400 dark:text-darkBlue-500 cursor-not-allowed;
+}
+
+.react-datepicker__navigation {
+  @apply text-gray-600 dark:text-darkBlue-300;
+}
+
+.react-datepicker__navigation:hover {
+  @apply text-primary-500;
+}

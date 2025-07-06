@@ -1,10 +1,34 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { Heart, Moon, Sun, Phone, Calendar } from 'lucide-react';
 import { useDarkMode } from '../hooks/useDarkMode';
 
 const Navbar: React.FC = () => {
   const { isDark, setIsDark } = useDarkMode();
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleBookService = () => {
+    navigate('/book');
+  };
+
+  const handleContactUs = () => {
+    if (location.pathname === '/') {
+      // Scroll to contact section if on home page
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // Navigate to home page and then scroll to contact
+      navigate('/', { state: { scrollToContact: true } });
+    }
+  };
+
+  const handleLogoClick = () => {
+    navigate('/');
+  };
 
   return (
     <motion.nav 
@@ -17,9 +41,10 @@ const Navbar: React.FC = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo and Company Name */}
           <motion.div 
-            className="flex items-center space-x-3"
+            className="flex items-center space-x-3 cursor-pointer"
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 400 }}
+            onClick={handleLogoClick}
           >
             <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg flex items-center justify-center">
               <Heart className="w-6 h-6 text-white" />
@@ -43,6 +68,7 @@ const Navbar: React.FC = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={handleContactUs}
               className="flex items-center space-x-2 px-4 py-2 rounded-lg bg-gray-100 dark:bg-darkBlue-800 text-gray-700 dark:text-darkBlue-200 hover:bg-gray-200 dark:hover:bg-darkBlue-700 transition-colors font-medium"
             >
               <Phone className="w-4 h-4" />
@@ -52,6 +78,7 @@ const Navbar: React.FC = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={handleBookService}
               className="flex items-center space-x-2 px-6 py-2 rounded-lg bg-primary-500 text-white hover:bg-primary-600 transition-colors font-semibold font-sans"
             >
               <Calendar className="w-4 h-4" />
@@ -73,6 +100,7 @@ const Navbar: React.FC = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={handleBookService}
               className="flex items-center space-x-2 px-4 py-2 rounded-lg bg-primary-500 text-white font-semibold font-sans"
             >
               <Calendar className="w-4 h-4" />
