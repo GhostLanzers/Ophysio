@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Prevent horizontal overflow */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+}
+
+/* Ensure all containers respect viewport width */
+* {
+  box-sizing: border-box;
+}
+
 /* React DatePicker Dark Mode Styles */
 .react-datepicker {
   @apply bg-white dark:bg-darkBlue-800 border border-gray-300 dark:border-darkBlue-600 rounded-lg shadow-lg;
