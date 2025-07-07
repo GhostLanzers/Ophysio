@@ -35,13 +35,13 @@ const Navbar: React.FC = () => {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-white/20 dark:bg-black/30 backdrop-blur-xl border-b border-gray-200/20 dark:border-gray-800/20"
+      className="fixed top-0 left-0 right-0 z-50 bg-white/20 dark:bg-black/30 backdrop-blur-xl border-b border-gray-200/20 dark:border-gray-800/20 w-full"
     >
-      <div className="w-full max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
-        <div className="flex items-center justify-between h-14 sm:h-16">
+      <div className="w-full max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
+        <div className="flex items-center justify-between h-14 sm:h-16 w-full">
           {/* Logo and Company Name */}
           <motion.div 
-            className="flex items-center space-x-2 sm:space-x-3 cursor-pointer flex-shrink-0 min-w-0"
+            className="flex items-center space-x-1 sm:space-x-3 cursor-pointer flex-shrink-0 min-w-0 overflow-hidden"
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 400 }}
             onClick={handleLogoClick}
@@ -49,7 +49,7 @@ const Navbar: React.FC = () => {
             <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg flex items-center justify-center flex-shrink-0 shadow-lg">
               <Heart className="w-4 h-4 sm:w-6 sm:h-6 text-white" />
             </div>
-            <span className="text-lg sm:text-xl lg:text-2xl font-display font-bold text-gray-900 dark:text-white tracking-tight truncate drop-shadow-sm">
+            <span className="text-base sm:text-xl lg:text-2xl font-display font-bold text-gray-900 dark:text-white tracking-tight truncate drop-shadow-sm">
               OPHYSIO.
             </span>
           </motion.div>
@@ -87,7 +87,7 @@ const Navbar: React.FC = () => {
           </div>
 
           {/* Mobile Navigation */}
-          <div className="md:hidden flex items-center space-x-2 flex-shrink-0">
+          <div className="md:hidden flex items-center space-x-1 flex-shrink-0">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
