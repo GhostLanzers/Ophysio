@@ -47,7 +47,7 @@ const HeroSection: React.FC = () => {
               <motion.div 
                 className="animate-scroll-up"
                 style={{ 
-                  animation: 'scroll-up 20s linear infinite',
+                  animation: 'scroll-up 35s linear infinite',
                 }}
               >
                 {scrollingServices.map((service, index) => (
