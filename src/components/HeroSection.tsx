@@ -8,7 +8,7 @@ const HeroSection: React.FC = () => {
   const scrollingServices = [...services, ...services];
 
   return (
-    <section className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50 dark:from-black dark:via-darkBlue-950 dark:to-darkBlue-900 pt-14 sm:pt-16 overflow-hidden">
+    <section className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50 dark:from-darkBlue-950 dark:via-darkBlue-900 dark:to-black pt-14 sm:pt-16 overflow-hidden">
       <div className="w-full max-w-7xl mx-auto px-3 sm:px-4 lg:px-8 py-8 sm:py-12">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[calc(100vh-6rem)] sm:min-h-[calc(100vh-8rem)]">
           

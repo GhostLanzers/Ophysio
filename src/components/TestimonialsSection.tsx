@@ -26,7 +26,7 @@ const TestimonialsSection: React.FC = () => {
   };
 
   return (
-    <section ref={ref} className="py-16 sm:py-20 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50 dark:from-black dark:via-darkBlue-950 dark:to-darkBlue-900">
+    <section ref={ref} className="py-16 sm:py-20 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50 dark:from-darkBlue-950 dark:via-darkBlue-900 dark:to-black">
       <div className="w-full max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

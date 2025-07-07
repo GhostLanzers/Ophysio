@@ -4,7 +4,7 @@ import BookingCard from '../components/booking/BookingCard';
 
 const BookingPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50 dark:from-black dark:via-darkBlue-950 dark:to-darkBlue-900 pt-16 sm:pt-20 pb-8 sm:pb-12">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50 dark:from-darkBlue-950 dark:via-darkBlue-900 dark:to-black pt-16 sm:pt-20 pb-8 sm:pb-12">
       <div className="w-full max-w-4xl mx-auto px-3 sm:px-4 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

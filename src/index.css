@@ -14,6 +14,17 @@ html, body {
   box-sizing: border-box;
 }
 
+/* Hide scrollbar utility class */
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
+  }
+}
+
 /* React DatePicker Dark Mode Styles */
 .react-datepicker {
   @apply bg-white dark:bg-darkBlue-800 border border-gray-300 dark:border-darkBlue-600 rounded-lg shadow-lg;

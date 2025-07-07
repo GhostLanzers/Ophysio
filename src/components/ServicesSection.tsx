@@ -2,11 +2,14 @@ import React, { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Heart, Shield, Zap } from 'lucide-react';
 import { services } from '../data/services';
+import ServiceModal from './ServiceModal';
 
 const ServicesSection: React.FC = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [selectedService, setSelectedService] = useState<{ title: string; description: string } | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev + 1) % services.length);
@@ -25,8 +28,18 @@ const ServicesSection: React.FC = () => {
     return result;
   };
 
+  const handleLearnMore = (service: { title: string; description: string }) => {
+    setSelectedService(service);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedService(null);
+  };
+
   return (
-    <section ref={ref} className="py-16 sm:py-20 bg-white dark:bg-black">
+    <section ref={ref} className="py-16 sm:py-20 bg-white dark:bg-darkBlue-950">
       <div className="w-full max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -103,6 +116,7 @@ const ServicesSection: React.FC = () => {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
+                  onClick={() => handleLearnMore(service)}
                   className="w-full py-2 sm:py-3 bg-primary-500 text-white rounded-xl hover:bg-primary-600 transition-colors font-semibold font-sans text-sm sm:text-base"
                 >
                   Learn More
@@ -112,6 +126,13 @@ const ServicesSection: React.FC = () => {
           </div>
         </div>
       </div>
+
+      {/* Service Modal */}
+      <ServiceModal
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        service={selectedService}
+      />
     </section>
   );
 };

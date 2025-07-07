@@ -35,7 +35,7 @@ const Navbar: React.FC = () => {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-white/20 dark:bg-black/30 backdrop-blur-xl border-b border-gray-200/20 dark:border-darkBlue-800/20"
+      className="fixed top-0 left-0 right-0 z-50 bg-white/20 dark:bg-black/30 backdrop-blur-xl border-b border-gray-200/20 dark:border-gray-800/20"
     >
       <div className="w-full max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
         <div className="flex items-center justify-between h-14 sm:h-16">
@@ -50,7 +50,7 @@ const Navbar: React.FC = () => {
               <Heart className="w-4 h-4 sm:w-6 sm:h-6 text-white" />
             </div>
             <span className="text-lg sm:text-xl lg:text-2xl font-display font-bold text-gray-900 dark:text-white tracking-tight truncate drop-shadow-sm">
-              Ophysio physiotherapy.
+              OPHYSIO.
             </span>
           </motion.div>
 
@@ -60,7 +60,7 @@ const Navbar: React.FC = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setIsDark(!isDark)}
-              className="p-2 rounded-lg bg-white/30 dark:bg-black/40 text-gray-700 dark:text-darkBlue-200 hover:bg-white/50 dark:hover:bg-black/60 transition-all duration-200 backdrop-blur-md border border-white/20 dark:border-darkBlue-700/30 shadow-lg"
+              className="p-2 rounded-lg bg-white/30 dark:bg-black/40 text-gray-700 dark:text-gray-200 hover:bg-white/50 dark:hover:bg-black/60 transition-all duration-200 backdrop-blur-md border border-white/20 dark:border-gray-700/30 shadow-lg"
             >
               {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
             </motion.button>
@@ -69,7 +69,7 @@ const Navbar: React.FC = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={handleContactUs}
-              className="flex items-center space-x-2 px-4 py-2 rounded-lg bg-white/30 dark:bg-black/40 text-gray-700 dark:text-darkBlue-200 hover:bg-white/50 dark:hover:bg-black/60 transition-all duration-200 font-medium backdrop-blur-md border border-white/20 dark:border-darkBlue-700/30 shadow-lg"
+              className="flex items-center space-x-2 px-4 py-2 rounded-lg bg-white/30 dark:bg-black/40 text-gray-700 dark:text-gray-200 hover:bg-white/50 dark:hover:bg-black/60 transition-all duration-200 font-medium backdrop-blur-md border border-white/20 dark:border-gray-700/30 shadow-lg"
             >
               <Phone className="w-4 h-4" />
               <span className="font-sans">Contact Us</span>
@@ -92,7 +92,7 @@ const Navbar: React.FC = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setIsDark(!isDark)}
-              className="p-2 rounded-lg bg-white/30 dark:bg-black/40 text-gray-700 dark:text-darkBlue-200 backdrop-blur-md border border-white/20 dark:border-darkBlue-700/30 shadow-lg"
+              className="p-2 rounded-lg bg-white/30 dark:bg-black/40 text-gray-700 dark:text-gray-200 backdrop-blur-md border border-white/20 dark:border-gray-700/30 shadow-lg"
             >
               {isDark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
             </motion.button>
@@ -100,11 +100,19 @@ const Navbar: React.FC = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={handleContactUs}
+              className="p-2 rounded-lg bg-white/30 dark:bg-black/40 text-gray-700 dark:text-gray-200 backdrop-blur-md border border-white/20 dark:border-gray-700/30 shadow-lg"
+            >
+              <Phone className="w-4 h-4" />
+            </motion.button>
+            
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
               onClick={handleBookService}
-              className="flex items-center space-x-1 px-3 py-2 rounded-lg bg-primary-500/70 text-white font-semibold font-sans text-sm backdrop-blur-md border border-primary-400/30 shadow-lg"
+              className="p-2 rounded-lg bg-primary-500/70 text-white backdrop-blur-md border border-primary-400/30 shadow-lg"
             >
               <Calendar className="w-4 h-4" />
-              <span>Book</span>
             </motion.button>
           </div>
         </div>

@@ -22,7 +22,7 @@ export default {
           800: '#075985',
           900: '#0c4a6e',
         },
-        // Dark blue shades for dark mode
+        // Much darker blue shades for enhanced dark mode
         darkBlue: {
           50: '#f8fafc',
           100: '#f1f5f9',
@@ -31,10 +31,10 @@ export default {
           400: '#94a3b8',
           500: '#64748b',
           600: '#475569',
-          700: '#334155',
-          800: '#1e293b',
-          900: '#0f172a',
-          950: '#020617',
+          700: '#1e293b',
+          800: '#0f172a',
+          900: '#020617',
+          950: '#000000',
         },
       },
       fontSize: {
