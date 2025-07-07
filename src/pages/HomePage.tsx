@@ -4,6 +4,7 @@ import HeroSection from '../components/HeroSection';
 import ServicesSection from '../components/ServicesSection';
 import TestimonialsSection from '../components/TestimonialsSection';
 import ContactSection from '../components/ContactSection';
+import Footer from '../components/Footer';
 
 const HomePage: React.FC = () => {
   const location = useLocation();
@@ -26,6 +27,7 @@ const HomePage: React.FC = () => {
       <ServicesSection />
       <TestimonialsSection />
       <ContactSection />
+      <Footer />
     </>
   );
 };
