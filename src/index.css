@@ -14,6 +14,11 @@ html, body {
   box-sizing: border-box;
 }
 
+/* Prevent any element from causing horizontal overflow */
+.container, .max-w-7xl, .w-full {
+  max-width: 100vw;
+}
+
 /* Hide scrollbar utility class */
 @layer utilities {
   .scrollbar-hide {

@@ -41,7 +41,7 @@ const Navbar: React.FC = () => {
         <div className="flex items-center justify-between h-14 sm:h-16">
           {/* Logo and Company Name */}
           <motion.div 
-            className="flex items-center space-x-2 sm:space-x-3 cursor-pointer flex-shrink-0"
+            className="flex items-center space-x-2 sm:space-x-3 cursor-pointer flex-shrink-0 min-w-0"
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 400 }}
             onClick={handleLogoClick}
