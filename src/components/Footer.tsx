@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
           <div className="flex items-center space-x-1">
             <span>Developed & Maintained with</span>
             <Heart className="w-2.5 h-2.5 text-red-500 fill-current" />
-            <span>by GHOSTLANZERS.</span>
+            <span>by <a href="https://ghostlanzers.onrender.com/" target="_blank">GHOSTLANZERS.</a></span>
           </div>
         </div>
       </div>
