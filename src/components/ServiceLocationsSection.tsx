@@ -1,11 +1,13 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { MapPin, Globe } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { statesAndCities } from '../data/locations';
 
 const ServiceLocationsSection: React.FC = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
+  const navigate = useNavigate();
 
   // Get random cities from all available cities
   const getAllCities = () => {
@@ -101,7 +103,7 @@ const ServiceLocationsSection: React.FC = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => {
-                window.location.href = '/book';
+                navigate('/book');
               }}
               className="px-6 py-3 bg-green-500 text-white rounded-xl hover:bg-green-600 transition-colors font-semibold font-sans text-sm sm:text-base"
             >
