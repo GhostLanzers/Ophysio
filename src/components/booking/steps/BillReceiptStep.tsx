@@ -58,6 +58,10 @@ const BillReceiptStep: React.FC<BillReceiptStepProps> = ({ data, onBack }) => {
               <span className="font-sans">{data.name}</span>
             </div>
             <div className="flex items-center text-gray-600 dark:text-darkBlue-300">
+              <MapPin className="w-4 h-4 mr-2" />
+              <span className="font-sans">{data.selectedCity}, {data.selectedState}</span>
+            </div>
+            <div className="flex items-center text-gray-600 dark:text-darkBlue-300">
               <Phone className="w-4 h-4 mr-2" />
               <span className="font-sans">{data.phone}</span>
             </div>

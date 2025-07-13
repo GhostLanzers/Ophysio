@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import HeroSection from '../components/HeroSection';
 import ServicesSection from '../components/ServicesSection';
+import ServiceLocationsSection from '../components/ServiceLocationsSection';
 import TestimonialsSection from '../components/TestimonialsSection';
 import ContactSection from '../components/ContactSection';
 import Footer from '../components/Footer';
@@ -25,6 +26,7 @@ const HomePage: React.FC = () => {
     <>
       <HeroSection />
       <ServicesSection />
+      <ServiceLocationsSection />
       <TestimonialsSection />
       <ContactSection />
       <Footer />

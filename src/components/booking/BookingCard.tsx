@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLocation } from 'react-router-dom';
 import BasicDetailsStep from './steps/BasicDetailsStep';
+import ServiceLocationStep from './steps/ServiceLocationStep';
 import SelectServicesStep from './steps/SelectServicesStep';
 import DateTimeStep from './steps/DateTimeStep';
 import BillReceiptStep from './steps/BillReceiptStep';
@@ -14,6 +15,8 @@ const BookingCard: React.FC = () => {
     phone: '',
     email: '',
     healthIssue: '',
+    selectedState: '',
+    selectedCity: '',
     selectedServices: [],
     selectedDate: null,
     selectedTime: '',
@@ -40,7 +43,7 @@ const BookingCard: React.FC = () => {
   };
 
   const nextStep = () => {
-    if (currentStep < 4) {
+    if (currentStep < 5) {
       setCurrentStep(prev => prev + 1);
     }
   };
@@ -63,7 +66,7 @@ const BookingCard: React.FC = () => {
         );
       case 2:
         return (
-          <SelectServicesStep
+          <ServiceLocationStep
             data={bookingData}
             updateData={updateBookingData}
             onNext={nextStep}
@@ -72,7 +75,7 @@ const BookingCard: React.FC = () => {
         );
       case 3:
         return (
-          <DateTimeStep
+          <SelectServicesStep
             data={bookingData}
             updateData={updateBookingData}
             onNext={nextStep}
@@ -80,6 +83,15 @@ const BookingCard: React.FC = () => {
           />
         );
       case 4:
+        return (
+          <DateTimeStep
+            data={bookingData}
+            updateData={updateBookingData}
+            onNext={nextStep}
+            onBack={prevStep}
+          />
+        );
+      case 5:
         return (
           <BillReceiptStep
             data={bookingData}
@@ -103,17 +115,17 @@ const BookingCard: React.FC = () => {
         <div className="bg-gray-50 dark:bg-darkBlue-800 px-6 py-4">
           <div className="flex items-center justify-between mb-2">
             <span className="text-sm font-display font-medium text-gray-600 dark:text-darkBlue-300">
-              Step {currentStep} of 4
+              Step {currentStep} of 5
             </span>
             <span className="text-sm font-display font-medium text-gray-600 dark:text-darkBlue-300">
-              {Math.round((currentStep / 4) * 100)}% Complete
+              {Math.round((currentStep / 5) * 100)}% Complete
             </span>
           </div>
           <div className="w-full bg-gray-200 dark:bg-darkBlue-700 rounded-full h-2">
             <motion.div
               className="bg-gradient-to-r from-primary-500 to-primary-600 h-2 rounded-full"
-              initial={{ width: '25%' }}
-              animate={{ width: `${(currentStep / 4) * 100}%` }}
+              initial={{ width: '20%' }}
+              animate={{ width: `${(currentStep / 5) * 100}%` }}
               transition={{ duration: 0.3 }}
             />
           </div>

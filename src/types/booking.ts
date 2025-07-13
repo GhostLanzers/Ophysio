@@ -10,6 +10,8 @@ export interface BookingData {
   phone: string;
   email: string;
   healthIssue: string;
+  selectedState: string;
+  selectedCity: string;
   selectedServices: Service[];
   selectedDate: Date | null;
   selectedTime: string;
