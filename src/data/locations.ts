@@ -23,9 +23,12 @@ export const statesAndCities: StateData[] = [
   {
     name: "Andhra Pradesh",
     cities: [
-      "Vizag",
+      "Visakhapatnam",
       "Kurnool",
-      "Vijayawada"
+      "Vijayawada",
+      "Nellore",
+      "Kadapa",
+      "Pulivendula"
     ]
   }
 ];
