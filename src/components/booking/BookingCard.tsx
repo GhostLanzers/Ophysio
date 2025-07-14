@@ -17,6 +17,7 @@ const BookingCard: React.FC = () => {
     healthIssue: '',
     selectedState: '',
     selectedCity: '',
+    isOnlineRehab: false,
     selectedServices: [],
     selectedDate: null,
     selectedTime: '',
@@ -43,13 +44,19 @@ const BookingCard: React.FC = () => {
   };
 
   const nextStep = () => {
-    if (currentStep < 5) {
+    // Skip step 3 (Select Services) if Online Rehab is selected
+    if (currentStep === 2 && bookingData.isOnlineRehab) {
+      setCurrentStep(4); // Go directly to Date & Time
+    } else if (currentStep < 5) {
       setCurrentStep(prev => prev + 1);
     }
   };
 
   const prevStep = () => {
-    if (currentStep > 1) {
+    // Handle back navigation when Online Rehab was selected
+    if (currentStep === 4 && bookingData.isOnlineRehab) {
+      setCurrentStep(2); // Go back to Service Location
+    } else if (currentStep > 1) {
       setCurrentStep(prev => prev - 1);
     }
   };

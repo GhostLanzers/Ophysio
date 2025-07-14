@@ -12,6 +12,7 @@ export interface BookingData {
   healthIssue: string;
   selectedState: string;
   selectedCity: string;
+  isOnlineRehab: boolean;
   selectedServices: Service[];
   selectedDate: Date | null;
   selectedTime: string;

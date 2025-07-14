@@ -59,7 +59,9 @@ const BillReceiptStep: React.FC<BillReceiptStepProps> = ({ data, onBack }) => {
             </div>
             <div className="flex items-center text-gray-600 dark:text-darkBlue-300">
               <MapPin className="w-4 h-4 mr-2" />
-              <span className="font-sans">{data.selectedCity}, {data.selectedState}</span>
+              <span className="font-sans">
+                {data.isOnlineRehab ? 'Online Rehab opted' : `${data.selectedCity}, ${data.selectedState}`}
+              </span>
             </div>
             <div className="flex items-center text-gray-600 dark:text-darkBlue-300">
               <Phone className="w-4 h-4 mr-2" />
@@ -79,6 +81,12 @@ const BillReceiptStep: React.FC<BillReceiptStepProps> = ({ data, onBack }) => {
             Appointment Details
           </h3>
           <div className="space-y-2 text-sm">
+            <div className="flex items-center text-gray-600 dark:text-darkBlue-300">
+              <MapPin className="w-4 h-4 mr-2" />
+              <span className="font-sans">
+                {data.isOnlineRehab ? 'Online Session' : `${data.selectedCity}, ${data.selectedState}`}
+              </span>
+            </div>
             <div className="flex items-center text-gray-600 dark:text-darkBlue-300">
               <Calendar className="w-4 h-4 mr-2" />
               <span className="font-sans">{formatDate(data.selectedDate)}</span>
