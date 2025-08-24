@@ -41,7 +41,7 @@ const StakeholdersSection: React.FC = () => {
                 <div className="relative">
                   <div className="w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 rounded-full overflow-hidden border-4 border-primary-200 dark:border-primary-800 shadow-2xl">
                     <img 
-                      src="../../public/Kunal.jpg"
+                      src="/Kunal.jpg"
                       alt="Dr. Kunal Habde - CEO & Founder"
                       className="w-full h-full object-cover"
                     />
