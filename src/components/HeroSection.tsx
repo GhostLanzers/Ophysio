@@ -80,7 +80,7 @@ const HeroSection: React.FC = () => {
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <img src='../../public/OphysioHD_logo.png' />
+              <img src='/OphysioHD_logo.png' alt="Ophysio Logo"/>
             </motion.div>
 
             {/* Feature Icons */}
