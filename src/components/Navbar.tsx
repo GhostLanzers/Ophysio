@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { Heart, Moon, Sun, Phone, Calendar } from 'lucide-react';
+import { Moon, Sun, Phone, Calendar } from 'lucide-react';
 import { useDarkMode } from '../hooks/useDarkMode';
 
 const Navbar: React.FC = () => {
@@ -46,8 +46,8 @@ const Navbar: React.FC = () => {
             transition={{ type: "spring", stiffness: 400 }}
             onClick={handleLogoClick}
           >
-            <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg flex items-center justify-center flex-shrink-0 shadow-lg">
-              <Heart className="w-4 h-4 sm:w-6 sm:h-6 text-white" />
+            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl flex items-center">
+              <img src="/OphysioHD_logo.png" alt="Ophysio Logo" />
             </div>
             <span className="text-base sm:text-xl lg:text-2xl font-display font-bold text-gray-900 dark:text-white tracking-tight truncate drop-shadow-sm">
               OPHYSIO.

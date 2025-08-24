@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Heart, Activity, Shield, Zap } from 'lucide-react';
+import { Activity, Shield, Zap } from 'lucide-react';
 import { services } from '../data/services';
 
 const HeroSection: React.FC = () => {
@@ -80,7 +80,7 @@ const HeroSection: React.FC = () => {
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <Heart className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 text-white" />
+              <img src='../../public/OphysioHD_logo.png' />
             </motion.div>
 
             {/* Feature Icons */}

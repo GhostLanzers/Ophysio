@@ -41,8 +41,8 @@ const StakeholdersSection: React.FC = () => {
                 <div className="relative">
                   <div className="w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 rounded-full overflow-hidden border-4 border-primary-200 dark:border-primary-800 shadow-2xl">
                     <img 
-                      src="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop"
-                      alt="Dr. Rajesh Kumar - CEO & Founder"
+                      src="../../public/Kunal.jpg"
+                      alt="Dr. Kunal Habde - CEO & Founder"
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -61,7 +61,7 @@ const StakeholdersSection: React.FC = () => {
                   transition={{ duration: 0.8, delay: 0.4 }}
                 >
                   <h3 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold text-gray-900 dark:text-white mb-2 sm:mb-3 tracking-tight">
-                    Dr. Rajesh Kumar
+                    Dr. Kunal Habde
                   </h3>
                   <p className="text-lg sm:text-xl text-primary-600 dark:text-primary-400 font-display font-semibold mb-4 sm:mb-6 tracking-wide">
                     CEO & Founder
@@ -72,11 +72,11 @@ const StakeholdersSection: React.FC = () => {
                     <div className="flex items-center justify-center lg:justify-start space-x-3 mb-2">
                       <Trophy className="w-6 h-6 sm:w-7 sm:h-7 text-yellow-600 dark:text-yellow-400" />
                       <span className="text-lg sm:text-xl font-display font-bold text-yellow-700 dark:text-yellow-300">
-                        Padma Bhushan Awardee
+                        Bharat Vibhushan Awardee
                       </span>
                     </div>
                     <p className="text-sm sm:text-base text-yellow-700 dark:text-yellow-300 font-sans leading-relaxed">
-                      Honored with India's third-highest civilian award for distinguished service in the field of healthcare and physiotherapy
+                      Honoring the remarkable individuals and organizations making outstanding contributions in healthcare and physiotherapy.
                     </p>
                   </div>
 
@@ -125,7 +125,7 @@ const StakeholdersSection: React.FC = () => {
               "To make quality physiotherapy care accessible to every individual across India, empowering them to live pain-free, active lives through innovative treatment approaches and compassionate care."
             </p>
             <p className="text-sm sm:text-base text-primary-600 dark:text-primary-400 font-display font-semibold mt-3 sm:mt-4">
-              - Dr. Rajesh Kumar
+              - Dr. Kunal Habde
             </p>
           </div>
         </motion.div>

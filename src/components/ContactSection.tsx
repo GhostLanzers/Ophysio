@@ -21,26 +21,26 @@ const ContactSection: React.FC = () => {
   const contactInfo = [
     {
       icon: MapPin,
-      title: "Location",
-      details: ["123 Healthcare Boulevard", "Medical District, City 12345"],
+      title: "Head Office",
+      details: ["301, Anant Nandadeep", "Jogeshwari, Mumbai 400060"],
       color: "text-red-500"
     },
     {
       icon: Phone,
       title: "Phone",
-      details: ["+1 (555) 123-4567", "Emergency: +1 (555) 987-6543"],
+      details: ["+91 9082282143", "Emergency: +91 9167339766"],
       color: "text-green-500"
     },
     {
       icon: Mail,
       title: "Email",
-      details: ["info@ophysio.com", "appointments@ophysio.com"],
+      details: ["ophysiophysiotherapy@gmail.com", "INFO: admin@ophysio.in"],
       color: "text-blue-500"
     },
     {
       icon: Clock,
       title: "Hours",
-      details: ["Mon-Fri: 7:00 AM - 8:00 PM", "Sat-Sun: 9:00 AM - 5:00 PM"],
+      details: ["Mon-Fri: 7:00 AM - 10:00 PM", "Saturday: 9:00 AM - 2:00 PM"],
       color: "text-purple-500"
     }
   ];
