@@ -5,6 +5,7 @@ import ServicesSection from '../components/ServicesSection';
 import ServiceLocationsSection from '../components/ServiceLocationsSection';
 import TestimonialsSection from '../components/TestimonialsSection';
 import StakeholdersSection from '../components/StakeholdersSection';
+import TeamSection from '../components/TeamSection';
 import ContactSection from '../components/ContactSection';
 import Footer from '../components/Footer';
 
@@ -30,6 +31,7 @@ const HomePage: React.FC = () => {
       <ServiceLocationsSection />
       <TestimonialsSection />
       <StakeholdersSection />
+      <TeamSection />
       <ContactSection />
       <Footer />
     </>
