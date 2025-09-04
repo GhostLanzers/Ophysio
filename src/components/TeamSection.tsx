@@ -11,7 +11,7 @@ const TeamSection: React.FC = () => {
       name: "Er. Bala Chandrashekhar",
       title: "Chief Information Officer",
       image: "/Bala.png",
-      description: "Rohit leads our technology initiatives and digital transformation efforts. With his B.Tech in Computer Science Engineering background, he has revolutionized our patient management systems and implemented cutting-edge healthcare technologies to enhance service delivery.",
+      description: "Bala leads our technology initiatives and digital transformation efforts. With his B.Tech in Computer Science Engineering background, he has revolutionized our patient management systems and implemented cutting-edge healthcare technologies to enhance service delivery.",
       achievements: ["B.Tech CSE Graduate", "Digital Healthcare Expert", "System Architecture", "Technology Innovation"]
     },
     {
@@ -22,17 +22,17 @@ const TeamSection: React.FC = () => {
       achievements: ["MD in Sports Medicine", "20+ Years Experience", "Clinical Excellence Award", "Healthcare Leadership"]
     },
     {
-      name: "Mr. Arjun Patel",
+      name: "Dr. Yogesh Parui",
       title: "Regional Director",
-      image: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
-      description: "Arjun oversees our expansion across multiple states and ensures consistent quality of care. His strategic vision has helped us establish centers in over 15 cities, making physiotherapy accessible to thousands of patients.",
+      image: "/RD.jpeg",
+      description: "Yogesh oversees our expansion across multiple states and ensures consistent quality of care. His strategic vision has helped us establish centers in over 15 cities, making physiotherapy accessible to thousands of patients.",
       achievements: ["MBA Healthcare Management", "15+ Cities Expansion", "Strategic Planning Expert", "Quality Assurance Leader"]
     },
     {
-      name: "Ms. Kavya Reddy",
+      name: "Dr. Dhwani Bhanushali",
       title: "Chief Operating Officer",
-      image: "https://images.pexels.com/photos/3823488/pexels-photo-3823488.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
-      description: "Kavya ensures smooth operations across all our facilities and maintains the highest standards of patient care. Her innovative approach to operational efficiency has improved patient satisfaction rates significantly.",
+      image: "/COO.jpeg",
+      description: "Dhwani ensures smooth operations across all our facilities and maintains the highest standards of patient care. Her innovative approach to operational efficiency has improved patient satisfaction rates significantly.",
       achievements: ["Operations Excellence", "Patient Care Innovation", "Process Optimization", "Team Leadership"]
     }
   ];
