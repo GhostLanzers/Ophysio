@@ -61,7 +61,7 @@ const StakeholdersSection: React.FC = () => {
                   transition={{ duration: 0.8, delay: 0.4 }}
                 >
                   <h3 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold text-gray-900 dark:text-white mb-2 sm:mb-3 tracking-tight">
-                    Dr. Kunal Habde
+                    Kunal S. Habde
                   </h3>
                   <p className="text-lg sm:text-xl text-primary-600 dark:text-primary-400 font-display font-semibold mb-4 sm:mb-6 tracking-wide">
                     CEO & Founder
@@ -82,14 +82,14 @@ const StakeholdersSection: React.FC = () => {
 
                   {/* Description */}
                   <p className="text-sm sm:text-base lg:text-lg text-gray-600 dark:text-darkBlue-300 font-sans leading-relaxed mb-4 sm:mb-6">
-                    With over 25 years of experience in physiotherapy and healthcare management, Dr. Kumar has revolutionized rehabilitation services across India. His vision of accessible, quality physiotherapy care has transformed thousands of lives and established new standards in the industry.
+                    Since founding Ophysio in 2021, Kunal has led the company in developing smart rehabilitation systems, fostering collaborations with hospitals, and delivering impactful solutions for patients worldwide. He has revolutionized rehabilitation services across India, with a vision of making quality physiotherapy care accessible to all—transforming thousands of lives and setting new standards in the fraternity.
                   </p>
 
                   {/* Key Achievements */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                     <div className="flex items-center space-x-2">
                       <Star className="w-4 h-4 sm:w-5 sm:h-5 text-primary-500" />
-                      <span className="text-xs sm:text-sm text-gray-600 dark:text-darkBlue-300 font-sans">25+ Years Experience</span>
+                      <span className="text-xs sm:text-sm text-gray-600 dark:text-darkBlue-300 font-sans">National Book of Records Holder</span>
                     </div>
                     <div className="flex items-center space-x-2">
                       <Users className="w-4 h-4 sm:w-5 sm:h-5 text-primary-500" />
@@ -125,7 +125,7 @@ const StakeholdersSection: React.FC = () => {
               "To make quality physiotherapy care accessible to every individual across India, empowering them to live pain-free, active lives through innovative treatment approaches and compassionate care."
             </p>
             <p className="text-sm sm:text-base text-primary-600 dark:text-primary-400 font-display font-semibold mt-3 sm:mt-4">
-              - Dr. Kunal Habde
+              - Kunal S. Habde
             </p>
           </div>
         </motion.div>

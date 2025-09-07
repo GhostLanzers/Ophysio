@@ -14,26 +14,33 @@ const TeamSection: React.FC = () => {
       description: "Bala spearheads our technology initiatives, driving innovation and leading digital transformation with vision and expertise. While excelling as an IT professional with top MNCs, he is also the founder of his own IT venture - Ghostlanzers. At Ophysio, he has revolutionized patient management systems and introduced cutting-edge healthcare technologies to elevate service delivery.",
       achievements: ["B.Tech CSE Graduate", "Digital Healthcare Expert", "System Architecture", "Technology Innovation"]
     },
+    // {
+    //   name: "Dr. Priya Sharma",
+    //   title: "Managing Director",
+    //   image: "https://images.pexels.com/photos/5327585/pexels-photo-5327585.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+    //   description: "With over 20 years of experience in healthcare management and physiotherapy, Dr. Priya leads our clinical operations with excellence. She holds advanced certifications in sports medicine and has been instrumental in establishing our treatment protocols.",
+    //   achievements: ["MD in Sports Medicine", "20+ Years Experience", "Clinical Excellence Award", "Healthcare Leadership"]
+    // },
     {
-      name: "Dr. Priya Sharma",
-      title: "Managing Director",
-      image: "https://images.pexels.com/photos/5327585/pexels-photo-5327585.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
-      description: "With over 20 years of experience in healthcare management and physiotherapy, Dr. Priya leads our clinical operations with excellence. She holds advanced certifications in sports medicine and has been instrumental in establishing our treatment protocols.",
-      achievements: ["MD in Sports Medicine", "20+ Years Experience", "Clinical Excellence Award", "Healthcare Leadership"]
-    },
-    {
-      name: "Dr. Yogesh Parui",
-      title: "Regional Director",
-      image: "/RD.jpeg",
-      description: "Yogesh oversees our expansion across multiple states and ensures consistent quality of care. His strategic vision has helped us establish centers in over 15 cities, making physiotherapy accessible to thousands of patients.",
-      achievements: ["MBA Healthcare Management", "15+ Cities Expansion", "Strategic Planning Expert", "Quality Assurance Leader"]
+      name: "Dr. Sadaf Patel",
+      title: "Reginal Director",
+      image: "/RD.jpg",
+      description: "Dr. Sadaf Patel is a dedicatedly serving as Regional Director at OPHYSIO. With extensive experience in cardiopulmonary rehabilitation, ICU management, and patient-centered care, she combines clinical excellence with strategic leadership to strengthen regional healthcare initiatives. She has made significant contributions to healthcare innovations and actively engaging in impactful research.",
+      achievements: ["MBA Healthcare Management", "Masters in Cardiology", "10+ years of experience", "ICU and Critical Care"]
     },
     {
       name: "Dr. Dhwani Bhanushali",
       title: "Chief Operating Officer",
       image: "/COO.jpeg",
-      description: "Dhwani ensures smooth operations across all our facilities and maintains the highest standards of patient care. Her innovative approach to operational efficiency has improved patient satisfaction rates significantly.",
+      description: "DR. Dhwani Bhanushali is the Chief Operating Officer of OPHYSIO, where she oversees day-to-day operations, strategic execution, and organizational growth. With a strong foundation in physiotherapy, healthcare management, business administration, Dr. Dhwani ensures that company goals are translated into efficient systems and impactful results.",
       achievements: ["Operations Excellence", "Patient Care Innovation", "Process Optimization", "Team Leadership"]
+    },
+    {
+      name: "Dr. Yogesh Parui",
+      title: "Strategy Leader",
+      image: "/SL.jpeg",
+      description: "Dr. Yogesh Parui serves as the Strategy Leader at Ophysio, where he is responsible for building partnerships, and leading innovative initiatives in physiotherapy and rehabilitation. Despite being early in his professional journey, Dr. Yogesh has demonstrated strong leadership potential by expanding Ophysio’s presence, coordinating cross-functional teams.",
+      achievements: ["Expertise Healthcare Management", "15+ Cities Expansion", "Strategic Planning Expert", "Quality Assurance Leader"]
     }
   ];
 
