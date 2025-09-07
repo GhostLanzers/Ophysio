@@ -23,10 +23,10 @@ const TeamSection: React.FC = () => {
     // },
     {
       name: "Dr. Sadaf Patel",
-      title: "Reginal Director",
+      title: "Regional Director",
       image: "/RD.jpg",
       description: "Dr. Sadaf Patel is a dedicatedly serving as Regional Director at OPHYSIO. With extensive experience in cardiopulmonary rehabilitation, ICU management, and patient-centered care, she combines clinical excellence with strategic leadership to strengthen regional healthcare initiatives. She has made significant contributions to healthcare innovations and actively engaging in impactful research.",
-      achievements: ["MBA Hospital Management", "Masters in Cardiology and Respiratory Sciences", "10+ years of experience", "ICU and Critical Care"]
+      achievements: ["MBA Hospital Management", "Masters in Cardiovascular and Respiratory Sciences", "10+ years of experience", "Fellowship in Intensive Care Unit"]
     },
     {
       name: "Dr. Dhwani Bhanushali",
