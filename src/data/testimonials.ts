@@ -12,12 +12,6 @@ export const testimonials = [
     feedback: "After my knee injury, I thought my career was over. The physiotherapists here not only got me back to work but also taught me how to prevent future injuries. Outstanding service!"
   },
   {
-    name: "Sushila Sawant",
-    title: "Dance Instructor",
-    image: "/Sushila.jpeg",
-    feedback: "The manual therapy and movement training I received here was incredible. They understood my needs as a dancer and helped me regain my flexibility and strength better than ever."
-  },
-  {
     name: "Prashant Rane",
     title: "Retired Teacher",
     image: "/Prashant.jpeg",
