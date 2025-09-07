@@ -9,7 +9,7 @@ const TeamSection: React.FC = () => {
   const teamMembers = [
     {
       name: "Er. Bala Chandrashekhar",
-      title: "Chief Information Officer",
+      title: "Chief Information Officer.",
       image: "/Bala.png",
       description: "Bala spearheads our technology initiatives, driving innovation and leading digital transformation with vision and expertise. While excelling as an IT professional with top MNCs, he is also the founder of his own IT venture - Ghostlanzers. At Ophysio, he has revolutionized patient management systems and introduced cutting-edge healthcare technologies to elevate service delivery.",
       achievements: ["B.Tech CSE Graduate", "Digital Healthcare Platform Expert", "System Architecture", "Technology Innovation"]
