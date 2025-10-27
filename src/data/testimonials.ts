@@ -15,7 +15,7 @@ export const testimonials = [
     name: "Prashant Rane",
     title: "Retired Teacher",
     image: "/Prashant.jpeg",
-    feedback: "At 68, I didn't think I could improve my mobility issues. The geriatric care program here proved me wrong. I'm now more active than I've been in years!"
+    feedback: "At 51, I didn't think I could improve my mobility issues. The geriatric care program here proved me wrong. I'm now more active than I've been in years!"
   },
   {
     name: "Ashish Sooryawansham",

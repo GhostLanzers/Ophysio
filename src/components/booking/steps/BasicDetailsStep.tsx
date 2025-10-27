@@ -103,7 +103,7 @@ const BasicDetailsStep: React.FC<BasicDetailsStepProps> = ({ data, updateData, o
               className={`w-full pl-10 pr-4 py-3 rounded-xl bg-gray-50 dark:bg-darkBlue-800 border ${
                 errors.phone ? 'border-red-500' : 'border-gray-300 dark:border-darkBlue-600'
               } focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200 text-gray-900 dark:text-white font-sans`}
-              placeholder="+1 (555) 123-4567"
+              placeholder="+91 90822 82143"
             />
           </div>
           {errors.phone && (

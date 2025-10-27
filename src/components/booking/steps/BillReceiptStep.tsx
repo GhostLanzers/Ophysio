@@ -12,11 +12,11 @@ const BillReceiptStep: React.FC<BillReceiptStepProps> = ({ data, onBack }) => {
   const totalAmount = data.selectedServices.reduce((sum, service) => sum + service.price, 0);
 
   const handlePayNow = () => {
-    alert('Payment gateway integration would be implemented here. Redirecting to payment...');
+    alert('Our online payment gateway will be available soon. For now, please contact us at +91-9082282143 to schedule your appointment.');
   };
 
   const handlePayOnVisit = () => {
-    alert('Appointment booked successfully! You can pay during your visit. A confirmation email will be sent shortly.');
+    alert('We regret to inform you that Ophysio’s servers are temporarily down. For appointment bookings or assistance, please contact us at +91-9082282143.');
   };
 
   const formatDate = (date: Date | null) => {

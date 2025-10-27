@@ -238,7 +238,7 @@ const ContactSection: React.FC = () => {
                   className={`w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg sm:rounded-xl bg-white dark:bg-darkBlue-800 border ${
                     errors.phone ? 'border-red-500' : 'border-gray-300 dark:border-darkBlue-600'
                   } focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200 text-sm sm:text-base font-sans text-gray-900 dark:text-white`}
-                  placeholder="+1 (555) 123-4567"
+                  placeholder="+91 90822 82143"
                 />
                 {errors.phone && (
                   <p className="mt-1 text-xs sm:text-sm text-red-500 font-sans">{errors.phone}</p>
