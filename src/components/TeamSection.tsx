@@ -35,13 +35,13 @@ const TeamSection: React.FC = () => {
       description: "DR. Dhwani Bhanushali is the Chief Operating Officer of OPHYSIO, where she oversees day-to-day operations, strategic execution, and organizational growth. With a strong foundation in physiotherapy, healthcare management, business administration, Dr. Dhwani ensures that company goals are translated into efficient systems and impactful results.",
       achievements: ["Operations Excellence", "Patient Care Innovation", "Process Optimization", "Team Leadership"]
     },
-    {
-      name: "Dr. Yogesh Parui",
-      title: "Strategy Leader",
-      image: "/SL.jpeg",
-      description: "Dr. Yogesh Parui serves as the Strategy Leader at Ophysio, where he is responsible for building partnerships, and leading innovative initiatives in physiotherapy and rehabilitation. Despite being early in his professional journey, Dr. Yogesh has demonstrated strong leadership potential by expanding Ophysio’s presence, coordinating cross-functional teams.",
-      achievements: ["Expertise Healthcare Management", "15+ Cities Expansion", "Strategic Planning Expert", "Quality Assurance Leader"]
-    }
+    // {
+    //   name: "Dr. Yogesh Parui",
+    //   title: "Strategy Leader",
+    //   image: "/SL.jpeg",
+    //   description: "Dr. Yogesh Parui serves as the Strategy Leader at Ophysio, where he is responsible for building partnerships, and leading innovative initiatives in physiotherapy and rehabilitation. Despite being early in his professional journey, Dr. Yogesh has demonstrated strong leadership potential by expanding Ophysio’s presence, coordinating cross-functional teams.",
+    //   achievements: ["Expertise Healthcare Management", "15+ Cities Expansion", "Strategic Planning Expert", "Quality Assurance Leader"]
+    // }
   ];
 
   return (
